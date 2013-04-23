@@ -1,4 +1,5 @@
 # -*- coding: binary -*-
+
 require 'xmlrpc/client'
 require 'msgpack'
 
@@ -11,9 +12,7 @@ module Msf
 module RPC
 
 class Client
-
 	attr_accessor :sock, :token, :info
-
 
 	def initialize(info={})
 		self.info = {
@@ -27,7 +26,6 @@ class Client
 
 		self.token = self.info[:token]
 	end
-
 
 	def login(user,pass)
 		res = self.call("auth.login", user, pass)

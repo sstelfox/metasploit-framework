@@ -199,7 +199,6 @@ class Service
 	def authenticate(token)
 		stale = []
 
-
 		if not (token and token.kind_of?(::String))
 			return false
 		end
